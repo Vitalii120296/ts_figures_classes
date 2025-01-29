@@ -42,12 +42,12 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (this.radius <= 0) {
-      throw new Error('your error message');
+      throw new Error('Radius must be a positive number');
     }
   }
 
   getArea(): number {
-    return +(Math.PI * this.radius ** 2).toFixed(2);
+    return Math.floor(Math.PI * this.radius ** 2 * 100) / 100;
   }
 }
 
